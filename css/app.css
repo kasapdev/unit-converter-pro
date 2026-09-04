@@ -1,0 +1,83 @@
+/* =====================================================================
+   Unit Converter Pro — app.css
+   Extends the shared design system (base.css). Colors derive ONLY from
+   base.css CSS variables so dark + light themes both work.
+   ===================================================================== */
+
+[data-theme="light"] .icon-sun { display: none; }
+.icon-moon { display: none; }
+
+/* ===================== Category tabs ===================== */
+.category-panel { padding: var(--space-3) var(--space-4); }
+#categoryTabs { width: 100%; flex-wrap: wrap; }
+#categoryTabs button { flex: 1 1 auto; }
+
+/* ===================== Converter panel ===================== */
+.converter-panel { margin-top: var(--space-5); }
+.converter-panel .pane-head {
+  padding: 0 0 var(--space-4);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--space-4);
+}
+
+/* ===================== Unit grid ===================== */
+.unit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: var(--space-4);
+}
+.unit-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  transition: border-color var(--dur-1), background var(--dur-1);
+}
+.unit-field:focus-within {
+  border-color: var(--brand-500);
+  background: var(--surface-2);
+}
+.unit-field-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+.unit-field label {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: .01em;
+  color: var(--text-secondary);
+}
+.unit-field .unit-abbr {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.unit-field input {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 600;
+}
+.unit-field .unit-copy {
+  align-self: flex-end;
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+/* ===================== Responsive ===================== */
+@media (max-width: 720px) {
+  #statusBadge { display: none; }
+  .unit-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+}
+
+@media (max-width: 460px) {
+  .unit-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 360px) {
+  .unit-grid { grid-template-columns: 1fr; }
+}
