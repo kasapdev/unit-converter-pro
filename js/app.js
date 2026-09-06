@@ -90,7 +90,7 @@
         { key: 'mps', label: 'Meters/second', abbr: 'm/s', factor: 1 },
         { key: 'kph', label: 'Kilometers/hour', abbr: 'km/h', factor: 0.277777777778 },
         { key: 'mph', label: 'Miles/hour', abbr: 'mph', factor: 0.44704 },
-        { key: 'knot', label: 'Knots', abbr: 'kn', factor: 0.514444 },
+        { key: 'knot', label: 'Knots', abbr: 'kn', factor: 0.514444444444 },
         { key: 'fps', label: 'Feet/second', abbr: 'ft/s', factor: 0.3048 }
       ]
     },
